@@ -13,7 +13,7 @@ def sigmoid(x):
 def sigmoid_der(x):
     return sigmoid(x)*(1-sigmoid(x))
 
-for epoch in range(2):
+for epoch in range(1):
     inputs = feature_set
     print(inputs)
     print(bias)
@@ -22,6 +22,7 @@ for epoch in range(2):
     XW = np.dot(feature_set, weights) + bias
     #feedforward step2
     z = sigmoid(XW)
+    print(z)
     # backpropagation step 1
     error = z - labels
     print(error)
